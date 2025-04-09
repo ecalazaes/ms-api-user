@@ -1,11 +1,12 @@
 import { Sequelize } from "sequelize-typescript";
 import { UserEntity } from "../../../models/user/user.entity";
+require('dotenv').config();
 
 const sequelizeConnection = new Sequelize({
-    database: 'mms_user',
-    dialect: 'mysql',
-    username: 'root',
-    password: '',
+    database: process.env.DB_NAME,
+    dialect: process.env.DB_DIALECT as "mysql",
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
     logging: false,
     pool: {
         max: 3,
