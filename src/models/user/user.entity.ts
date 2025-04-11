@@ -2,7 +2,7 @@ import { Column, CreatedAt, DataType, Model, Sequelize, Table, UpdatedAt } from 
 import { IUser } from "./iuser.interface";
 
 @Table({
-    tableName: 'users'
+    tableName: 'tb_usuarios'
 })
 export class UserEntity extends Model implements IUser {
     @Column({
